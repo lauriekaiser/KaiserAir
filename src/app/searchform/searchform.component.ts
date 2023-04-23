@@ -11,6 +11,7 @@ import { HttpClient } from '@angular/common/http'
 export class SearchformComponent implements OnInit{
 
   searchform!: FormGroup
+  formsubmitted: boolean = false
 
  constructor(private http: HttpClient, private router: Router) {}
  
@@ -28,8 +29,9 @@ export class SearchformComponent implements OnInit{
 
 get FlyingFrom() {return this.searchform.get('FlyingFrom');}
 
- onSubmit (formvalue: any) {
-    console.log('Submitted', formvalue)
+ onSubmit () {
+    console.log('Submitted', this.searchform.value)
+    this.formsubmitted = true
  }
   }
 
