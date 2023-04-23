@@ -1,0 +1,21 @@
+.container {
+    background-color: white;
+    margin-top: -450px;
+    margin-left: 500px;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 4px 4px 30px;
+    padding: 20px;
+}
+
+select {
+    margin-left: 10px;
+}
+
+button {
+    margin: 10px;
+    justify-content: center;
+}

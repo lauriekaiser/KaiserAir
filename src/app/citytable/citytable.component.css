@@ -1,0 +1,10 @@
+.row {
+    display: flex;
+}
+
+table {
+    margin-top: 60px;
+    width: 300px;
+    margin-left: 30px;
+    align-items: flex-start;
+}
