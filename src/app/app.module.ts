@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { CitytableComponent } from './citytable/citytable.component';
 import { SearchformComponent } from './searchform/searchform.component';
 import { HomeComponent } from './home/home.component';
+import { BookflightComponent } from './bookflight/bookflight.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CitytableComponent,
     SearchformComponent,
-    HomeComponent
+    HomeComponent,
+    BookflightComponent
   ],
   imports: [
     BrowserModule,

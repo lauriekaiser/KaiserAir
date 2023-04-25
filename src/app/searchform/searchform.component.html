@@ -39,18 +39,18 @@
         </div>
 
         <div class="col-md-6">
-          <label for="inputAdult">Adults(18+)</label>
-          <input type="number" class="form-control" formControlName="inputAdult" id="inputAdult">
+          <label for="InputAdult">Adults(18+)</label>
+          <input type="number" class="form-control" formControlName="InputAdult" id="InputAdult">
          
         </div>
         <div class="col-md-6">
-          <label for="inputChildren">Children(0-7)</label>
-          <input type="number" class="form-control" formControlName="inputChildren" id="inputChildren">
+          <label for="InputChildren">Children(0-7)</label>
+          <input type="number" class="form-control" formControlName="InputChildren" id="InputChildren">
          
         </div>
         <div class="col-md-6">
-          <label for="inputFlyClass">Flying Class</label>
-          <select id="inputFlyClass" formControlName="inputFlyClass" class="form-control">
+          <label for="InputFlyClass">Flying Class</label>
+          <select id="InputFlyClass" formControlName="InputFlyClass" class="form-control">
             <option value="First">First Class</option>
             <option value="Business">Business Class</option>
             <option value="Economy">Economy Class</option>
@@ -61,7 +61,47 @@
         </div>
       </form>
       <div *ngIf="formsubmitted">
-        <p>form was submitted</p>
+        <h3>Flight Search Results</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Book</th>
+              <th scope="col">From</th>
+              <th scope="col">To</th>
+              <th scope="col">Departing</th>
+              <th scope="col">Time</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"> 
+                <button type="button" class="btn btn-link">Book This Flight</button>
+              </th>
+              <td>{{FlyingFrom}}</td>
+              <td>{{FlyingTo}}</td>
+              <td>{{Departing}}</td>
+              <td>6:15 AM</td>
+              <td>$157</td>
+            </tr>
+            <tr>
+              <th scope="row"> Book This Flight </th>
+              <td>{{FlyingFrom}}</td>
+              <td>{{FlyingTo}}</td>
+              <td>{{Departing}}</td>
+              <td>11:35 AM</td>
+              <td>$135</td>
+            </tr>
+            <tr>
+              <th scope="row"> Book This Flight </th>
+              <td>{{FlyingFrom}}</td>
+              <td>{{FlyingTo}}</td>
+              <td>{{Departing}}</td>
+              <td>5:30 PM</td>
+              <td>$183</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 </div>
 
