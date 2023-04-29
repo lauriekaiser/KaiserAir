@@ -3,7 +3,7 @@
     margin-top: -450px;
     margin-left: 500px;
     height: 500px;
-    width: 500px;
+    width: 700px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -20,7 +20,59 @@ button {
     justify-content: center;
 }
 
+
+
 h3 {
     text-align: center;
     margin-bottom: 40px;
+}
+
+.flightbooked {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 550px;
+    height: 200px;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.inputfields {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#inputfield1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 20px;
+}
+
+#inputfield2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 20px;
+}
+
+#inputfield3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.ticket {
+    background-color: white;
+    display: flex;
+    height: 500px;
+    width: 500px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 500px;
 }

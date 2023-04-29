@@ -7,18 +7,6 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   templateUrl: './bookflight.component.html',
   styleUrls: ['./bookflight.component.css']
 })
-export class BookflightComponent implements OnInit{
-  ngOnInit() {
-    this.BookFlight = new FormGroup({
-      FirstName: new FormControl('', Validators.required),
-      SecondName: new FormControl(''),
-      ThirdName: new FormControl('')
-    })
-  }
-
-  BookFlight!: FormGroup;
-  FirstName: any;
-  SecondName: any;
-  ThirdName: any;
+export class BookflightComponent{
 }
 

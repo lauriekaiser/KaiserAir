@@ -60,9 +60,11 @@
           <button type="Submit" class="btn btn-primary">Show Flights</button>
         </div>
       </form>
+
       <div *ngIf="formsubmitted">
         <h3>Flight Search Results</h3>
-        <table class="table">
+        <form [formGroup]="flightoptions" >
+        <table class="table" id="table">
           <thead>
             <tr>
               <th scope="col">Book</th>
@@ -76,33 +78,106 @@
           <tbody>
             <tr>
               <th scope="row"> 
-                <button type="button" class="btn btn-link">Book This Flight</button>
+                <button type="button" class="btn btn-link"  (click)="onClick()"  *ngIf="!showflightbooked">Book This Flight</button>
               </th>
               <td>{{FlyingFrom}}</td>
               <td>{{FlyingTo}}</td>
               <td>{{Departing}}</td>
-              <td>6:15 AM</td>
-              <td>$157</td>
+              <td>
+                <select  id="Time" class="form-control" formControlName="Time" >
+                  <option value="5:15 AM">5:15 AM</option>
+                  <option value="7:40 AM">7:40 AM</option>
+                  <option value="9:20 AM">9:20 AM</option>
+                </select>
+                </td>
+              <td>
+                <select id="price" class="form-control" formControlName="Price">
+                  <option value="$157">$157</option>
+                </select>
+                </td>
             </tr>
             <tr>
-              <th scope="row"> Book This Flight </th>
+              <th scope="row"> 
+                <button type="button" class="btn btn-link"  (click)="onClick()"  *ngIf="!showflightbooked">Book This Flight</button>
+              </th>
               <td>{{FlyingFrom}}</td>
               <td>{{FlyingTo}}</td>
               <td>{{Departing}}</td>
-              <td>11:35 AM</td>
-              <td>$135</td>
+              <td>
+                <select id="Time" class="form-control" formControlName="Time">
+                  <option value="12:15 PM">12:15 PM</option>
+                  <option value="1:00 PM">1:00 PM</option>
+                  <option value="3:45 PM">3:45 PM</option>
+                </select>
+                  </td>
+              <td>
+              <select id="price" class="form-control" formControlName="Price">
+                <option value="$135">$135</option>
+              </select>
+            </td>
             </tr>
             <tr>
-              <th scope="row"> Book This Flight </th>
+              <th scope="row"> 
+                <button type="button" class="btn btn-link" (click)="onClick()"  *ngIf="!showflightbooked">Book This Flight</button> </th>
               <td>{{FlyingFrom}}</td>
               <td>{{FlyingTo}}</td>
               <td>{{Departing}}</td>
-              <td>5:30 PM</td>
-              <td>$183</td>
+              <td>
+                <select  id="Time" class="form-control" formControlName="Time">
+                  <option value="5:50 PM">5:50 PM</option>
+                  <option value="7:40 PM">7:40 PM</option>
+                  <option value="10:00 PM">10:00 PM</option>
+                </select>
+              </td>
+              <td> <select id="price" class="form-control" formControlName="Price">
+                <option value="$183">$183</option>
+              </select>
+            </td>
             </tr>
           </tbody>
         </table>
+      </form>
       </div>
+    
+    </div>
+
+<div class="flightbooked">
+      <form [formGroup]="flightbooked" *ngIf="showflightbooked" id="flightbooked">
+        <div class="inputfields">
+        <div class="input-group mb-3" id="inputfield1">
+          <span  id="inputGroup-sizing-default">First Person Name</span>
+          <input type="text" class="form-control" formControlName="firstName" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3" id="inputfield2">
+          <span  id="inputGroup-sizing-default">Second Person Name</span>
+          <input type="text" class="form-control" formControlName="secondName" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3" id="inputfield3">
+          <span id="inputGroup-sizing-default">Third Person Name</span>
+          <input type="text" class="form-control" formControlName="thirdName" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <button type="button" class="btn btn-primary" (click)="myClick()" *ngIf="!showTicket" >Submit</button>
+      </div>
+    </form>
 </div>
+
+<div class="ticket" *ngIf="showTicket">
+  <div class="row" id="ticket"  #ticket>
+    <h2>Thank you, {{firstName}}, for choosing Kaiser Airlines!</h2>
+    <br>
+    <h3>Here is your flight information:</h3>
+  <p>Flying From: {{FlyingFrom}}</p>
+  <p>Flying To: {{FlyingTo}}</p>
+  <p>Fly Class: {{InputFlyClass}} </p>
+  <p>Departing: {{Departing}}</p>
+   <p>Time: {{Time}}  </p>
+   <p>Price: {{Price}} </p>
+<button type="button" class="btn btn-success" (click)="lastClick()" >Download Ticket</button>
+</div>
+</div>
+
+
+
+
 
 
