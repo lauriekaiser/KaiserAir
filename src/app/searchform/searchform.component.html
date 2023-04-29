@@ -33,17 +33,17 @@
           </select>
         </div>
 
-        <div class="col-10">
+        <div class="col-4">
           <label for="Departing">Departing</label>
           <input type="date" class="form-control" formControlName="Departing" id="Departing" placeholder="MM/DD/YYYY">
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-4">
           <label for="InputAdult">Adults(18+)</label>
           <input type="number" class="form-control" formControlName="InputAdult" id="InputAdult">
          
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
           <label for="InputChildren">Children(0-7)</label>
           <input type="number" class="form-control" formControlName="InputChildren" id="InputChildren">
          
@@ -143,7 +143,7 @@
 
 <div class="flightbooked">
       <form [formGroup]="flightbooked" *ngIf="showflightbooked" id="flightbooked">
-        <div class="inputfields">
+        <div class="inputfields" >
         <div class="input-group mb-3" id="inputfield1">
           <span  id="inputGroup-sizing-default">First Person Name</span>
           <input type="text" class="form-control" formControlName="firstName" aria-label="Default" aria-describedby="inputGroup-sizing-default">
@@ -172,7 +172,7 @@
   <p>Departing: {{Departing}}</p>
    <p>Time: {{Time}}  </p>
    <p>Price: {{Price}} </p>
-<button type="button" class="btn btn-success" (click)="lastClick()" >Download Ticket</button>
+<button type="button" id="pdfButton" class="btn btn-success" (click)="lastClick()" >Download Ticket</button>
 </div>
 </div>
 

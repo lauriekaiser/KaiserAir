@@ -83,7 +83,7 @@ export class SearchformComponent implements OnInit{
 
 
 lastClick() {
-  let ticket = new jsPDF()
+  let ticket = new jsPDF('p', 'pt', 'a4')
 
   ticket.html(this.el.nativeElement, {
     callback: (ticket) => {
